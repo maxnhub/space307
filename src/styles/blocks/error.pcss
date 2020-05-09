@@ -1,0 +1,87 @@
+.error {
+  
+  position: absolute;
+  top: -80%;
+  width: 100%;
+  left: 25%;
+  padding: 20px 25px;
+  font-size: 30px;
+  color: #fff;
+  background: $error-color;
+  border-radius: 5px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  @include middleHd {
+    top: -75%;
+    font-size: 27px;
+  }
+  @include desktop {
+    padding: 15px;
+    top: -92%;
+    left: 30%;
+    font-size: 12px;
+  }
+  @include tablets {
+    top: -105%;
+    left: 20%;
+    font-size: 11px;
+  }
+  @include phones {
+    left: 17%;
+  }
+  &:after {
+    content: '';
+    left: 45%;
+    bottom: -18px;
+    border: 20px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-top-color: $error-color;
+    border-bottom-width: 0px;
+    position: absolute;
+    @include middleHd {
+      border: 25px solid transparent;
+      border-top-color: $error-color;
+      border-bottom-width: 0px;
+      bottom: -15px;
+    }
+    @include desktop {
+      border: 12px solid transparent;
+      border-top-color: $error-color;
+      border-bottom-width: 0px;
+      bottom: -10px;
+    }
+  }
+  &.checkbox {
+    top: 110%;
+    left: 10%;
+    &:after {
+      top: -18px;
+      border: 20px solid transparent;
+      width: 0px;
+      height: 0px;
+      border-bottom-color: $error-color;
+      border-top-width: 0px;
+      @include middleHd {
+        border: 25px solid transparent;
+        border-bottom-color: $error-color;
+        border-top-width: 0px;
+        top: -15px;
+      }
+      @include desktop {
+        border: 12px solid transparent;
+        border-bottom-color: $error-color;
+        border-top-width: 0px;
+        top: -10px;
+      }
+      @include phones {
+        left: 5%;
+      }
+    }
+  }
+  &.active {
+    display: flex;
+  }
+}

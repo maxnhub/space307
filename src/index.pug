@@ -1,0 +1,66 @@
+include ./mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description" content="Тестовая страница для Space307")
+    link(href="https://img.icons8.com/doodle/48/000000/economic-improvement.png" rel="shortcut icon" type="image/x-icon")
+    title Space307 | test page
+  body
+    .wrapper
+      .maincontent
+        header.header
+          .container
+            .header__logo 
+              +icon('euro', 'logo__icon')
+            a.header__entry(href="#")
+              +icon('user', 'header__entry_icon')
+              span.header__entry_text Войти
+        section.start
+          .container
+            .start__field
+              h1.start__title Начните торговать прямо сейчас
+              ul.start__checks
+                li.start__checks_item
+                  .start__checks_icon
+                    .start__stick
+                  span.start__checks_text.start__checks_text--short Нет спреда - торгуйте с прозрачными и точными котировками
+                li.start__checks_item
+                  .start__checks_icon
+                    .start__stick
+                  span.start__checks_text Достаточно депозита в 10$, чтобы начать торговать
+              form.start__form(action="" id="start")
+                .start__form_block 
+                  input.start__form_input(type="email" id="form-email" name="email" autocomplete="off" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required)
+                  .error
+                  label.start__form_label(for="form-email" id="label-email") Ваш e-mail
+                .start__form_block
+                  input.start__form_input(type="password" id="form-password" name="password" placeholder=" " pattern="[0-9a-zA-Z]{4,8}" required)
+                  .error
+                  label.start__form_label(for="form-password" id="label-password") Придумайте пароль
+                .start__form_currency
+                  span.start__form_desc Валюта для ввода и вывода средств
+                  .start__form_radio
+                    label.start__form_radio_label
+                      input.start__form_radio_input(type="radio" name="radio" checked)
+                      .start__form_radio_custom.roubles
+                        span.start__form_radio_text P
+                    label.start__form_radio_label
+                      input.start__form_radio_input(type="radio" name="radio")
+                      .start__form_radio_custom.dollars
+                        span.start__form_radio_text S
+                    label.start__form_radio_label
+                      input.start__form_radio_input(type="radio" name="radio")
+                      .start__form_radio_custom.euros
+                        span.start__form_radio_text E
+                .start__form_adult
+                  label.start__form_adult_label
+                    
+                    input.start__form_adult_check(type="checkbox" name="checkbox" required)
+                    .error.checkbox
+                    span.start__form_adult_custom
+                    span.start__form_desc Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.
+                button.start__form_button(type="submit" id="formButton") Зарегистрироваться

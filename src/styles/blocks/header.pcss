@@ -1,0 +1,50 @@
+.header {
+  padding-top: 30px;
+  margin-bottom: 70px;
+  @include desktop {
+    padding-top: 16px;
+    margin-bottom: 28px;
+  }
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    width: 75px;
+    height: 75px;
+    fill: #fff;
+    @include desktop {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  &__entry {
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #D8E1E6;
+    color: #fff;
+    font-weight: bold;
+    padding: 25px 30px 25px 50px;
+    @include desktop {
+      padding: 8px 8px 8px 21px;
+    }
+    &_icon {
+      width: 40px;
+      height: 40px;
+      fill: #fff;
+      margin-right: 25px;
+      @include desktop {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+    &_text {
+      font-size: 36px;
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+  }
+}

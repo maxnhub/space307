@@ -1,0 +1,12 @@
+{
+  "text-color": "#7a8f99",
+  "input-color": "#212d3e",
+  "error-color": "#e15433",
+  "green-color": "#20a86b",
+  "bp-desktop-hd": "3500px",
+  "bp-middle-hd": "2480px",
+  "bp-desktop": "2000px",
+  "bp-medium": "1340px",
+  "bp-tablets": "768px",
+  "bp-phones": "480px"
+}
